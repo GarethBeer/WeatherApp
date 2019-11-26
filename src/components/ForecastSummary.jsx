@@ -1,10 +1,12 @@
 import React from 'react';
+import WeatherIcon from 'react-icons-weather';
+import moment from 'moment';
 
 const ForecastSummary = props => {
   return (
     <>
-      <p>{props.date}</p>
-      <p>{props.icon}</p>
+      <p>{moment().format('ddd Do MMM')}</p>
+      <WeatherIcon name="owm" iconId={props.icon} />
       <p>{props.description}</p>
       <p>{props.temperature}</p>
     </>
