@@ -4,6 +4,7 @@ import axios from 'axios';
 import LocationDetails from '../Location-Details/location-details';
 import ForecastSummaries from '../Forecast-Summaries/Forecast-Summaries';
 import ForecastDetails from '../Forecast-Details/Forecast-Details';
+import SearchForm from '../Search-Form/SearchForm';
 
 import './app.css';
 
@@ -43,6 +44,7 @@ class App extends React.Component {
     return (
       <div className="forecast">
         <LocationDetails city={this.state.location.city} country={this.state.location.country} />
+        <SearchForm />
         <ForecastSummaries
           forecasts={this.state.forecasts}
           onForecastSelect={this.handleForecastSelect}

@@ -1,0 +1,13 @@
+.searchForm {
+  display: flex;
+  justify-content: right;
+  position: fixed;
+  top: 5%;
+  right: 10%;
+}
+
+input {
+  height: 30px;
+  width: 300px;
+  border-radius: 10px;
+}
