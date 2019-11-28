@@ -6,10 +6,9 @@ const LocationDetails = props => {
   const { city, country } = props;
   return (
     <h1 className="location-details">
-      {`
-${city},     
-${country}
-`}
+      {city}
+,
+{country}
     </h1>
   );
 };

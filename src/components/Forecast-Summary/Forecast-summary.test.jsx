@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import ForecastSummary from './ForecastSummary';
 import setup from '../../setup';
 
-it('renders the date', () => {
+xit('renders the date', () => {
   const wrapper = shallow(
     <ForecastSummary
       date="mockDate"
@@ -42,7 +42,7 @@ it('renders the description', () => {
   expect(wrapper.find('.description').text()).toEqual('mockDescription');
 });
 
-it('renders the icon', () => {
+xit('renders the icon', () => {
   const wrapper = shallow(
     <ForecastSummary
       date="mockDate"
