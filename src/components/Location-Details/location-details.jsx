@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './locationstyle.css';
 
 const LocationDetails = props => {
+  const { city, country } = props;
   return (
     <h1 className="location-details">
-      {props.city}
-,
-{props.country}
+      {`
+${city},     
+${country}
+`}
     </h1>
   );
 };

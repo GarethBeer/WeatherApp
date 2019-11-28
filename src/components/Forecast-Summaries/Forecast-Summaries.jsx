@@ -1,7 +1,7 @@
 import React from 'react';
-import ForecastSummary from './ForecastSummary';
+import ForecastSummary from '../Forecast-Summary/ForecastSummary';
 
-import '../styles/forecast-summaries.css';
+import './forecast-summaries.css';
 
 const ForecastSummaries = props => {
   return (
@@ -13,9 +13,11 @@ const ForecastSummaries = props => {
           description={forecast.description}
           icon={forecast.icon}
           temperature={forecast.temperature.max}
+          onSelect={props.onForecastSelect}
         />
       ))}
     </div>
   );
 };
+
 export default ForecastSummaries;

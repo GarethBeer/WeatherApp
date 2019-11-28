@@ -1,0 +1,16 @@
+.forecastDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 40%;
+  left: 25%;
+  width: 50%;
+  height: 425px;
+  opacity: 0.75;
+  box-shadow: 5px 5px 10px grey;
+  border-radius: 5%;
+  background-color: white;
+  font-size: 20px;
+}

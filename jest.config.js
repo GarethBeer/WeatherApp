@@ -9,7 +9,7 @@ module.exports = {
     },
   },
   clearMocks: true,
-  testMatch: ['**/__test__/**/*.spec.js{,x}'],
+  testMatch: ['**/test/**/*.spec.js{,x}'],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testURL: 'http://localhost',
 };
