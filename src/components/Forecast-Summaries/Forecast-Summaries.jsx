@@ -5,7 +5,7 @@ import './forecast-summaries.css';
 
 const ForecastSummaries = props => {
   return (
-    <div className="forecast-summaries">
+    <section className="forecast-summaries">
       {props.forecasts.map(forecast => (
         <ForecastSummary
           key={forecast.date}
@@ -16,7 +16,7 @@ const ForecastSummaries = props => {
           onSelect={props.onForecastSelect}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

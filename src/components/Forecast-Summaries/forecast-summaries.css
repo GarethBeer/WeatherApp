@@ -3,10 +3,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  /*  background-color: azure; */
-  position: fixed;
-  top: 10%;
-  /* opacity: 0.9; */
   flex-wrap: wrap;
 }
 
@@ -26,4 +22,5 @@
 p {
   font-size: 16px;
   font-weight: 300;
+  font-family: 'Calistoga', cursive;
 }

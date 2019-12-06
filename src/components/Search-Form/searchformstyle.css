@@ -1,13 +1,19 @@
 .searchForm {
   display: flex;
   justify-content: right;
-  position: fixed;
-  top: 5%;
-  right: 10%;
+  align-items: center;
+  margin-right: 10px;
 }
 
 input {
   height: 30px;
   width: 300px;
   border-radius: 10px;
+}
+
+button {
+  height: 35px;
+  width: 60px;
+  border-radius: 10px;
+  opacity: 0.8;
 }

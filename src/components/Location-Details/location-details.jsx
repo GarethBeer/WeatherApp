@@ -8,6 +8,7 @@ const LocationDetails = props => {
     <h1 className="location-details">
       {city}
 ,
+{' '}
 {country}
     </h1>
   );

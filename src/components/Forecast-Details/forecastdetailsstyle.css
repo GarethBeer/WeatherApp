@@ -3,14 +3,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 40%;
-  left: 25%;
   width: 50%;
-  height: 425px;
+  height: 375px;
   opacity: 0.75;
   box-shadow: 5px 5px 10px grey;
-  border-radius: 5%;
+  border-radius: 30px;
   background-color: white;
   font-size: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.temp {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.wind {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.windSpeed:after {
+  content: 'mph';
+  font-size: 15px;
+  font-style: italic;
+}
+
+.windDir {
+  font-style: italic;
 }

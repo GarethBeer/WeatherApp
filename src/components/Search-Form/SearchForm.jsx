@@ -4,23 +4,15 @@ import './searchformstyle.css';
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      searchText: ' ',
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  handleInputChange(event) {
-    this.setState({
-      searchText: event.target.value,
-    });
+    this.state = {};
   }
 
   render() {
+    const { handleSubmit, handleInputChange } = this.props;
     return (
       <div className="searchForm">
-        <input type="text" onChange={this.handleInputChange} value={this.state.searchText} />
-        <button>Search</button>
+        <input type="text" onChange={handleInputChange} value={this.props.searchText} />
+        <button onClick={handleSubmit}>Search</button>
       </div>
     );
   }

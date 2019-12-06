@@ -1,5 +1,6 @@
 .location-details {
   text-align: left;
-
+  margin-left: 20px;
+  font-family: 'Calistoga', cursive;
   font-size: 55px;
 }

@@ -1,4 +1,37 @@
-.forecast {
-  margin: 0px 20px;
+body {
+  margin: 0px;
+}
+.Clouds {
+  margin: 0px;
   font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./clouds.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.Rain {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./rain.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.Clear {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('./flock-of-birds-917494.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
