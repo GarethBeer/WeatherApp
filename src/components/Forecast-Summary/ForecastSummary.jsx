@@ -4,7 +4,7 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 
 const ForecastSummary = props => {
-  const { date, icon, description, temperature } = props;
+  const { date, icon, description, temperature, onSelect } = props;
 
   return (
     <div className="weatherCards">
@@ -12,7 +12,9 @@ const ForecastSummary = props => {
       <WeatherIcon name="owm" iconId={icon} />
       <p className="description">{description}</p>
       <p className="temperature">{temperature}</p>
-      <button onClick={() => props.onSelect(date)}>More Details</button>
+      <button onClick={() => onSelect(date)} type="submit">
+        More Details
+      </button>
     </div>
   );
 };
@@ -21,6 +23,7 @@ ForecastSummary.propTypes = {
   temperature: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  onSelect: PropTypes.func.isRequired,
 };
 
 export default ForecastSummary;

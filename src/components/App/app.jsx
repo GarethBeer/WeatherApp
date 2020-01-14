@@ -13,7 +13,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchText: ' ',
+      searchText: '',
       selectedDate: 0,
       forecasts: [],
       location: {

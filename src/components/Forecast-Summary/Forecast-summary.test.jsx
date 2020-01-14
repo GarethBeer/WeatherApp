@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { parseZone } from 'moment';
 import ForecastSummary from './ForecastSummary';
-import setup from '../../setup';
 
 xit('renders the date', () => {
   const wrapper = shallow(
@@ -13,7 +13,7 @@ xit('renders the date', () => {
     />,
   );
 
-  expect(wrapper.find('.date').text()).toEqual('mockDate');
+  expect(wrapper.find('.date').text()).toBe('mockDate');
 });
 
 it('renders the temperature', () => {
@@ -42,15 +42,24 @@ it('renders the description', () => {
   expect(wrapper.find('.description').text()).toEqual('mockDescription');
 });
 
-xit('renders the icon', () => {
-  const wrapper = shallow(
-    <ForecastSummary
-      date="mockDate"
-      temperature="mockTemperature"
-      description="mockDescription"
-      icon="mockIcon"
-    />,
-  );
+it('it renders a button', () => {
+  const wrapper = shallow(<ForecastSummary />);
+  const button = wrapper.find('button');
 
-  expect(wrapper.props('icon')).toEqual('mockIcon');
+  expect(button.exists()).toBe(true);
+});
+
+test('upon clicking button expect the onSelect handler to be called', () => {
+  const props = {
+    onSelect: jest.fn(),
+    date: 'date',
+  };
+
+  const wrapper = shallow(<ForecastSummary {...props} />);
+
+  wrapper.find('button').simulate('click');
+
+  expect(props.onSelect).toHaveBeenCalled();
+  expect(props.onSelect).toHaveBeenCalledTimes(1);
+  expect(props.onSelect).toHaveBeenCalledWith(props.date);
 });

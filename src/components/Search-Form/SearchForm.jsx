@@ -1,21 +1,22 @@
 import React from 'react';
 import './searchformstyle.css';
 
-class SearchForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    const { handleSubmit, handleInputChange } = this.props;
-    return (
-      <div className="searchForm">
-        <input type="text" onChange={handleInputChange} value={this.props.searchText} />
-        <button onClick={handleSubmit}>Search</button>
-      </div>
-    );
-  }
-}
+const SearchForm = props => {
+  const { handleSubmit, handleInputChange, searchText } = props;
+  return (
+    <div className="searchForm">
+      <input
+        type="text"
+        name="input"
+        onChange={handleInputChange}
+        value={searchText}
+        className="inputField"
+      />
+      <button onClick={handleSubmit} type="button">
+        Search
+      </button>
+    </div>
+  );
+};
 
 export default SearchForm;
