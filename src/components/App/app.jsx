@@ -21,6 +21,7 @@ class App extends React.Component {
         country: '',
       },
       image: '',
+      width: 0,
     };
   }
 
@@ -30,6 +31,7 @@ class App extends React.Component {
         location: data.data.location,
         forecasts: data.data.forecasts,
         image: data.data.forecasts[0].description,
+        width: window.innerWidth,
       });
     });
   }
@@ -48,9 +50,15 @@ class App extends React.Component {
   };
 
   handleForecastSelect = date => {
-    this.setState({
-      selectedDate: date,
-    });
+    if (this.state.selectedDate === date) {
+      this.setState({
+        selectedDate: 0,
+      });
+    } else {
+      this.setState({
+        selectedDate: date,
+      });
+    }
   };
 
   handleInputChange = event => {
@@ -78,6 +86,8 @@ class App extends React.Component {
         <ForecastSummaries
           forecasts={this.state.forecasts}
           onForecastSelect={this.handleForecastSelect}
+          selectedForecast={selectedForecast}
+          width={this.state.width}
         />
         {selectedForecast && <ForecastDetails forecasts={selectedForecast} />}
       </section>
@@ -88,7 +98,7 @@ App.propTypes = {
   location: PropTypes.shape({
     city: PropTypes.string,
     country: PropTypes.string,
-  }).isRequired,
-  forecasts: PropTypes.array.isRequired,
+  }),
+  forecasts: PropTypes.array,
 };
 export default App;

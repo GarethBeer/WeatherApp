@@ -38,3 +38,12 @@
 .windDir {
   font-style: italic;
 }
+
+@media screen and (max-width: 768px) {
+  .forecastDetails {
+    width: 100%;
+    border-radius: 0;
+    height: 100%;
+    margin-top: 10px;
+  }
+}

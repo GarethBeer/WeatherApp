@@ -17,3 +17,21 @@ button {
   border-radius: 10px;
   opacity: 0.8;
 }
+
+@media screen and (max-width: 768px) {
+  .searchForm {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  input {
+    width: 200px;
+    margin: 5px;
+  }
+  button {
+    width: 70px;
+  }
+  button:hover {
+    border: 1px solid black;
+  }
+}
