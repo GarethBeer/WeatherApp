@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import SearchForm from './SearchForm';
+import SearchForm from '../components/Search-Form/SearchForm';
 
 it('it renders an input field', () => {
   const wrapper = shallow(<SearchForm />);

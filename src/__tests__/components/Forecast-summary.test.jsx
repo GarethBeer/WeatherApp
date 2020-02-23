@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { parseZone } from 'moment';
-import ForecastSummary from './ForecastSummary';
+import ForecastSummary from '../components/Forecast-Summary/ForecastSummary';
 
 xit('renders the date', () => {
   const wrapper = shallow(
