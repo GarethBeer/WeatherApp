@@ -49,7 +49,7 @@ it('it renders a button', () => {
   expect(button.exists()).toBe(true);
 });
 
-test('upon clicking button expect the onSelect handler to be called', () => {
+it('upon clicking button expect the onSelect handler to be called', () => {
   const props = {
     onSelect: jest.fn(),
     date: 'date',

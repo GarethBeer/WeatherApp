@@ -22,8 +22,8 @@ const SearchForm = props => {
 };
 
 SearchForm.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  handleInputChange: PropTypes.func.isRequired,
-  searchText: PropTypes.string.isRequired,
+  handleSubmit: PropTypes.func,
+  handleInputChange: PropTypes.func,
+  searchText: PropTypes.string,
 };
 export default SearchForm;

@@ -19,11 +19,10 @@ const ForecastSummary = props => {
   );
 };
 ForecastSummary.propTypes = {
-  date: PropTypes.number.isRequired,
-  temperature: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
-  onSelect: PropTypes.func.isRequired,
+  date: PropTypes.string,
+  temperature: PropTypes.string,
+  description: PropTypes.string,
+  icon: PropTypes.string,
 };
 
 export default ForecastSummary;

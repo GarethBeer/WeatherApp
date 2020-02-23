@@ -18,10 +18,7 @@ test('the input field initialises empty', () => {
 
   expect(input.props().value).toBe('');
 });
-test('the input field value is whatever it is written', () => {
-  const props = {
-    searchText: '',
-  };
+xtest('the input field value is whatever it is written', () => {
   const wrapper = shallow(<SearchForm />);
 
   wrapper.find('.inputField').simulate('change', {
